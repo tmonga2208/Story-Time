@@ -1,0 +1,40 @@
+html,
+body {
+  height: 100%;
+  background-image: url(img/new.png)
+}
+
+.form-signin {
+  max-width: 500px;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 10%;
+  color:  black;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+  background-color: white;
+  color: black;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: white;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background-color: white;  
+} 
+
+img{
+  background-color: black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

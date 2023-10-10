@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Template</title>
+
+  <!-- Include Firebase scripts -->
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js"></script>
+
+  <!-- Your Firebase configuration -->
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBjDlYRAORXoGOVG5BGcn7rzWxHbIHrz5Y",
+      authDomain: "story-time-3127b.firebaseapp.com",
+      projectId: "story-time-3127b",
+      storageBucket: "story-time-3127b.appspot.com",
+      messagingSenderId: "172026169157",
+      appId: "1:172026169157:web:78e810a6e6cdb8acc3202c",
+      measurementId: "G-J9R6PBKP9L"
+    };
+
+    const app = firebase.initializeApp(firebaseConfig);
+    const database = firebase.database();
+    const auth = firebase.auth();
+  </script>
+
+  <!-- Your custom styles -->
+  <style>
+    /* Add your custom styles here */
+  </style>
+</head>
+<body class="d-flex align-items-center py-4 bg-body-tertiary">
+  <main class="form-signin w-100 m-auto">
+    <form>
+      <img class="mb-4" src="../img/logo.jpg" alt="" width="72" height="57">
+      <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
+
+      <div class="form-floating">
+        <input type="text" class="form-control" id="email" placeholder="name@example.com">
+        <label for="email">Email</label>
+      </div>
+
+      <div class="form-floating">
+        <input type="password" class="form-control" id="password" placeholder="Password">
+        <label for="password">Password</label>
+      </div>
+
+      <div class="form-floating">
+        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+        <label for="confirmPassword">Confirm Password</label>
+      </div>
+
+      <div class="form-floating">
+        <input type="text" class="form-control" id="username" placeholder="Username">
+        <label for="username">Username</label>
+      </div>
+
+      <br>
+
+      <input class="btn btn-primary w-100 py-2" type="button" id="signup" value="Sign Up">
+      <p class="mt-5 mb-3 text-body-secondary">&copy; Story Time</p>
+    </form>
+  </main>
+
+  <!-- JavaScript code -->
+  <script>
+    const signup = document.getElementById('signup');
+
+    signup.addEventListener('click', () => {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      // You can add Firebase authentication logic here
+      firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          // User signed up successfully
+          const user = userCredential.user;
+          alert('User Created');
+        })
+        .catch((error) => {
+          // Handle authentication errors
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          alert(errorMessage);
+        });
+    });
+  </script>
+</body>
+</html>

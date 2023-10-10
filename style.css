@@ -1,0 +1,37 @@
+.navbar{
+    background-color: black;
+}
+li .nav-item{
+    color: black;
+}
+.btn{
+    color: white;
+    --bs-btn-border-width: 1px;
+    --bs-btn-line-height: 1.5;
+    --bs-btn-bg: green;
+}
+.btn-outline-success{
+    --bs-btn-border-color: black;
+}
+.logo{
+    height: 50px;
+}
+.btn-prev{
+    display: inline-block;
+    vertical-align: middle;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.btn-next{
+    display: inline-block;
+    vertical-align: middle;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
